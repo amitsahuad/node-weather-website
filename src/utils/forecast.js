@@ -13,7 +13,7 @@ request({url ,json: true},(error, {body})=>{
         callback(undefined, 'Unable to find place')
     }
     else callback(undefined,
-        body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degree out. There is a '+body.currently.precipProbability+'% chance of rain.'    
+        body.daily.data[0].summary+' It is currently '+body.currently.temperature+' degree out. There is a high '+ body.daily.data[0].temperatureHigh+' with a low of '+ body.daily.data[0].temperatureLow+'. There is a '+body.currently.precipProbability+'% chance of rain.'    
     )
 })
 }
